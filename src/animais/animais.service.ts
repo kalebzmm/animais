@@ -43,6 +43,7 @@ export const update = async (
 ): Promise<Animal | null> => {
   const animal = await find(id);
 
+  const animal = null;
   if (!animal) {
     return null;
   }
