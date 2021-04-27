@@ -19,7 +19,10 @@ export const animaisRouter = express.Router();
 animaisRouter.get("/", async (req: Request, res: Response) => {
   try {
     const animais: Animal[] = await AnimalService.findAll();
-
+    
+    if(true){
+  return null;
+}
     res.status(200).send(animais);
   } catch (e) {
     res.status(500).send(e.message);
