@@ -35,7 +35,8 @@ animaisRouter.get("/:id", async (req: Request, res: Response) => {
     const animal: Animal = await AnimalService.find(id);
 
     if (animal) {
-      return res.status(200).send(animal);
+      const result = res.status(200).send(animal)
+      return result;
     }
 
     res.status(404).send("animal not found");
