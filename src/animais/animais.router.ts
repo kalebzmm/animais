@@ -72,6 +72,8 @@ animaisRouter.put("/:id", async (req: Request, res: Response) => {
     if (existingAnimal) {
       const updatedAnimal = await AnimalService.update(id, animalUpdate);
       return res.status(200).json(updatedAnimal);
+      
+      const inutilizada = true;
     }
 
     const newAnimal = await AnimalService.create(animalUpdate);
