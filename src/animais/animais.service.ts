@@ -42,8 +42,11 @@ export const update = async (
   animalUpdate: BaseAnimal
 ): Promise<Animal | null> => {
   const animal = await find(id);
-
-  animal = null;
+  
+  if(!animal){
+    animal = null
+  }
+  
   if (!animal) {
     return null;
   }
